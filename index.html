@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Exam Night: last-minute revision companion for Indian engineering students. Demo with curated sample data." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Exam Night - revise smarter the night before</title>
+    <script>
+      (function () {
+        try {
+          var d = JSON.parse(localStorage.getItem('examnight:v1:device') || '{}');
+          var dark = d.theme === 'dark' || ((!d.theme || d.theme === 'system') && matchMedia('(prefers-color-scheme: dark)').matches);
+          if (dark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
